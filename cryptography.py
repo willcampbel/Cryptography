@@ -18,7 +18,9 @@ elif int1 == 'e' or 'd':
    message = input("Message: ") 
 else:   
     print("Did not understand command, try again.")
-key = input("
+key = input("Key: ")
+message = [associations.index(x) for x in message]
+print(message)
 
 """
 Enter e to encrypt, d to decrypt, or q to quit: e

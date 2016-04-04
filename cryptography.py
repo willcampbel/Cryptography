@@ -13,10 +13,17 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 quit = false 
 while quit==false:
     int1 = input("Enter e to encrypt, d to decrypt, or q to quit:")
-    if int1 in ('e', 'd' 'q')
+    if int1 not in ('e', 'd' 'q'):
+        print("Did not understand command, try again.")
+        int1 = input("Enter e to encrypt, d to decrypt, or q to quit:")
+    if int1== 'e':
+        message = input("Message: ")
+        key = input("Key: ")
+        
+        
     
 
-
+"""
 if int1 == 'q':
     print("Goodbye")
 elif int1 == 'e' or'd':
@@ -26,7 +33,7 @@ else:
 key = input("Key: ")
 message = [associations.index(x) for x in message]
 print(message)
-
+"""
 """
 Enter e to encrypt, d to decrypt, or q to quit: e
 Message: Two plus two = Five

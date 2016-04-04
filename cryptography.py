@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: <your name here>
-Credit: Payton, David,
+Credit: David, Payton
 
 Assignment:
 
@@ -18,7 +18,9 @@ while quit==False:
         int1 = input("Enter e to encrypt, d to decrypt, or q to quit:")
     if int1== 'e':
         message = input("Message: ")
+        message = [associations.index(x) for x in message]
         key = input("Key: ")
+        key = [associations.index(x) for x in key]
         mes1= len(message)
         k1= len(key) 
         list1= []

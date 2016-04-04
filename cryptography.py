@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: <your name here>
-Credit: David, Payton
+Credit: David, Payton, Morgan
 
 Assignment:
 
@@ -21,14 +21,21 @@ while quit==False:
         message = [associations.index(x) for x in message]
         key = input("Key: ")
         key = [associations.index(x) for x in key]
-        mes1= len(message)
-        k1= len(key) 
-        list1= []
-        list2= []
-        list3= []
+        m=len(message)
+        k=len(key)
+        let=[]
+        kelt=[]
+        comb =[]
+        if m>k:
+            count = key * int((m-(m%k))/k)
+            trun = key[0:(m%k)]
+            newkey = count + trun
+        elif k>m:
+            newkey = key[0:m] 
+        apple = [sum(x) for x in list(zip(newkey, message))]
+        orange = ''.join([associations[x] for x in apple])
+        print(orange)
         
-        
-    
 
 """
 if int1 == 'q':

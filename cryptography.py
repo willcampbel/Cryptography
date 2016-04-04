@@ -19,7 +19,11 @@ while quit==False:
     if int1== 'e':
         message = input("Message: ")
         key = input("Key: ")
-        
+        mes1= len(message)
+        k1= len(key) 
+        list1= []
+        list2= []
+        list3= []
         
         
     

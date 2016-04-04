@@ -13,10 +13,10 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 quit = False 
 while quit==False:
     int1 = input("Enter e to encrypt, d to decrypt, or q to quit:")
-    if int1 not in ('e', 'd' 'q'):
+    if int1 not in ('e', 'd', 'q'):
         print("Did not understand command, try again.")
         int1 = input("Enter e to encrypt, d to decrypt, or q to quit:")
-    if int1== 'e':
+    elif int1== 'e':
         message = input("Message: ")
         message = [associations.index(x) for x in message]
         key = input("Key: ")
@@ -33,6 +33,25 @@ while quit==False:
         elif k>m:
             newkey = key[0:m] 
         apple = [sum(x) for x in list(zip(newkey, message))]
+        orange = ''.join([associations[x] for x in apple])
+        print(orange)
+    elif int1== 'd':
+        message = input("Message: ")
+        message = [associations.index(x) for x in message]
+        key = input("Key: ")
+        key = [associations.index(x) for x in key]
+        m=len(message)
+        k=len(key)
+        let=[]
+        kelt=[]
+        comb =[]
+        if m>k:
+            count = key * int((m-(m%k))/k)
+            trun = key[0:(m%k)]
+            newkey = count + trun
+        elif k>m:
+            newkey = key[0:m] 
+        apple = [sum(x) for x in list(zip([x*-1 for x in newkey], message))]
         orange = ''.join([associations[x] for x in apple])
         print(orange)
         

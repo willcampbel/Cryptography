@@ -12,10 +12,10 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 quit = False 
 while quit==False:
-    int1 = input("Enter e to encrypt, d to decrypt, or q to quit:")
+    int1 = input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if int1 not in ('e', 'd', 'q'):
         print("Did not understand command, try again.")
-        int1 = input("Enter e to encrypt, d to decrypt, or q to quit:")
+        int1 = input("Enter e to encrypt, d to decrypt, or q to quit: ")
     elif int1== 'e':
         message = input("Message: ")
         message = [associations.index(x) for x in message]
@@ -54,6 +54,10 @@ while quit==False:
         apple = [sum(x) for x in list(zip([x*-1 for x in newkey], message))]
         orange = ''.join([associations[x] for x in apple])
         print(orange)
+    elif int1=='q':
+        quit=True
+        print("Goodbye!")
+        
         
 
 """

@@ -33,7 +33,7 @@ while quit==False:
         elif k>m:
             newkey = key[0:m] 
         apple = [sum(x) for x in list(zip(newkey, message))]
-        orange = ''.join([associations[x] for x in apple])
+        orange = ''.join([associations[x%len(associations)] for x in apple])
         print(orange)
     elif int1== 'd':
         message = input("Message: ")

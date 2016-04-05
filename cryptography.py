@@ -54,7 +54,7 @@ while quit==False:
         elif k>m:
             newkey = key[0:m] 
         apple = [sum(x) for x in list(zip([x*-1 for x in newkey], message))]
-        orange = ''.join([associations[x%len(associatons)] for x in apple])
+        orange = ''.join([associations[x%len(associations)] for x in apple])
         print(orange)
     elif int1=='q':
         quit=True

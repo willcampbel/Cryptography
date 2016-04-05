@@ -1,6 +1,6 @@
 """
 cryptography.py
-Author: <your name here>
+Author: Will Campbell
 Credit: David, Payton, Morgan
 
 Assignment:

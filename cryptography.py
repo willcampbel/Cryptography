@@ -31,7 +31,9 @@ while quit==False:
             trun = key[0:(m%k)]
             newkey = count + trun
         elif k>m:
-            newkey = key[0:m] 
+            newkey = key[0:m]
+        else:
+            newkey = key
         apple = [sum(x) for x in list(zip(newkey, message))]
         orange = ''.join([associations[x%len(associations)] for x in apple])
         print(orange)
